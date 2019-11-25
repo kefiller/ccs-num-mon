@@ -27,19 +27,15 @@ const nums2mon = {
     },
 };
 
-//function run() {
-    console.log('delete from monitor_numbers');
-    dbQuery('delete from monitor_numbers');
-    forOwn(nums2mon, (value, key) => {
-        const settings = JSON.stringify(value);
-        const sql = `insert into monitor_numbers(number, settings) values('${key}', '${settings}')`;
-        console.log(sql);
-        dbQuery(sql);
-    });
-    dbDisconnect();
-//}
-
-//run();
+console.log('delete from monitor_numbers');
+dbQuery('delete from monitor_numbers');
+forOwn(nums2mon, (value, key) => {
+    const settings = JSON.stringify(value);
+    const sql = `insert into monitor_numbers(number, settings) values('${key}', '${settings}')`;
+    console.log(sql);
+    dbQuery(sql);
+});
+dbDisconnect();
 
 /*
 fs.writeFile("test.txt", "Hey there!", function(err) {
