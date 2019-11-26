@@ -1,14 +1,15 @@
 {
   "name": "ccs-mon-nums",
   "version": "1.0.0",
-  "description": "",
+  "description": "ccs-mon-nums",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "me",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "lodash": "^4.17.15",
     "pg": "^7.14.0"
   }
