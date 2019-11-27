@@ -6,7 +6,6 @@ const { query, dbDisconnect } = require('./db');
 
 const nums2mon = {
     '78312681022': {
-        interval: '5 minutes',
         trunk: 'nn-88312681022'
     },
 };
