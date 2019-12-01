@@ -19,7 +19,7 @@ const client = new CCSApiClient({
         console.log(number, trunk, check_time);
 
         try {
-            let {result} = await client.callOriginate(
+            let result = await client.callOriginate(
                 {
                     type: 'number',
                     number,
