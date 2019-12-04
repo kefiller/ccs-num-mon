@@ -15,7 +15,7 @@ const client = new CCSApiClient({
     let sql = `select * from monitor_numbers where (now() - check_time) > interval '${check_interval}'`;
     const { rows } = await query(sql);
     for (const { number, settings: settingsJSON, check_time } of rows) {
-        const { trunk } = JSON.parse(settingsJSON);
+        const { trunk, callerid } = JSON.parse(settingsJSON);
         console.log(number, trunk, check_time);
 
         try {
@@ -23,7 +23,7 @@ const client = new CCSApiClient({
                 {
                     type: 'number',
                     number,
-                    callerid: number,
+                    callerid,
                     trunk
                 },
                 {

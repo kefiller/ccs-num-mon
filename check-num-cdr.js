@@ -16,7 +16,13 @@ if (isEmpty(myArgs)) {
 const number = myArgs[0];
 
 (async () => {
-    let sql = `select * from cdr where calldate > now()::date and (now() - calldate) < interval '${check_interval}' and dst = '${number}' order by calldate desc limit 1`;
+    //let sql = `select * from cdr where calldate > now()::date and (now() - calldate) < interval '${check_interval}' and dst = '${number}' order by calldate desc limit 1`;
+    let sql = `select * from cdr where 
+                    calldate > now()::date 
+                    and (now() - calldate) < interval '${check_interval}' 
+                    and dst = (select settings::json->>'incoming_exten' from monitor_numbers where number='${number}')
+                    and clid not like '"monitoring"%'
+                    order by calldate desc limit 1`;
     // console.log(sql);
     const { rows } = await query(sql);
     dbDisconnect();
