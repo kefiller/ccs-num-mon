@@ -8,57 +8,51 @@ const nums2mon = {
     // 011
 
     // NN
-    // // ???
-    // '88312621910': {
-    //     trunk: 'sp-84965419020',
-    //     callerid: '"monitoring" <84965419020>',
-    // },
-
     '88312681022': {
         // trunk: 'nn-88312681022'
         trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
+        incoming_exten: '88312681022',
     },
     '88312681000': {
         // trunk: 'nn-88312681000'
         trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
+        incoming_exten: '78312681000',
     },
     '88312681007': {
         // trunk: 'nn-88312681007'
         trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
+        incoming_exten: '88312681007',
     },
     '88312813000': {
         // trunk: 'cc-nn-78312813000'
         trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
+        incoming_exten: '78312813000',
     },
     '88312140022': {
         // trunk: 'cc-nn-78312140022'
         trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
+        incoming_exten: '78312140022',
     },
 
-    // // 000
+    // 000
 
     // Кстово
-    // // ???
-    // '88314536890': {
-    //     // trunk: 'kst-88314539600'
-    //     trunk: 'nn-88312681000'
-    // },
-
     '88314539600': {
         // trunk: 'kst-88314539600'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '39600',
     },
-
     '88314543977': {
         // trunk: 'cc-kst-88314543977'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '78314543977',
     },
 
     // Сергиев Посад
@@ -66,6 +60,7 @@ const nums2mon = {
         // trunk: 'sp-84965419020'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '84965419020',
     },
 
     // Пенза
@@ -73,6 +68,7 @@ const nums2mon = {
         // trunk: 'pnz-88412980100'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '78412980100',
     },
 
     // Киров
@@ -80,6 +76,7 @@ const nums2mon = {
         // trunk: 'kir-88332713317'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '78332713317',
     },
 
     // Кемерово
@@ -87,6 +84,7 @@ const nums2mon = {
         // trunk: 'cc-kem-73842780118'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '73842780118',
     },
 
     // Самара
@@ -94,26 +92,31 @@ const nums2mon = {
         // trunk: 'smr-88463004000'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '3004000',
     },
     '88463004004': {
         // trunk: 'smr-88463004004'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '3004004',
     },
     '88463004006': {
         // trunk: 'smr-88463004006'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '3004006',
     },
     '88463004008': {
         // trunk: 'smr-88463004008'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '3004008',
     },
     '88462500045': {
         // trunk: 'cc-smr-78462500045'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '78462500045',
     },
 
     // Набережные Челны
@@ -121,6 +124,7 @@ const nums2mon = {
         // trunk: 'nch-88552917722'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '88552917722',
     },
 
     // Волгоград
@@ -128,6 +132,7 @@ const nums2mon = {
         // trunk: 'ars-vgg-78442999998'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '999998',
     },
 
     // Волжский
@@ -135,13 +140,12 @@ const nums2mon = {
         // trunk: 'cc-vlz-78443201058'
         trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
+        incoming_exten: '78443201058',
     },
 
 
 
-
-
-
+   
 
     // '88412458934': {
     //     trunk: 'pnz-78412458934'
@@ -208,6 +212,18 @@ const nums2mon = {
     // },
     // '88462541630': {
     //     trunk: 'debt-smr-78462541630'
+    // },
+
+    // // НН СБК передача показаний, пока не мониторим
+    // '88312621910': {
+    //     trunk: 'sp-84965419020',
+    //     callerid: '"monitoring" <84965419020>',
+    // },
+
+    // // Кстово СБК передача показаний, пока не мониторим
+    // '88314536890': {
+    //     // trunk: 'kst-88314539600'
+    //     trunk: 'nn-88312681000'
     // },
 };
 
