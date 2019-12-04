@@ -9,32 +9,32 @@ const nums2mon = {
 
     // NN
     '88312681022': {
-        // trunk: 'nn-88312681022'
-        trunk: 'sp-84965419020',
+        real_trunk: 'nn-88312681022',
+       dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '88312681022',
     },
     '88312681000': {
-        // trunk: 'nn-88312681000'
-        trunk: 'sp-84965419020',
+        real_trunk: 'nn-88312681000',
+        dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '78312681000',
     },
     '88312681007': {
-        // trunk: 'nn-88312681007'
-        trunk: 'sp-84965419020',
+        real_trunk: 'nn-88312681007',
+        dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '88312681007',
     },
     '88312813000': {
-        // trunk: 'cc-nn-78312813000'
-        trunk: 'sp-84965419020',
+        real_trunk: 'cc-nn-78312813000',
+        dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '78312813000',
     },
     '88312140022': {
-        // trunk: 'cc-nn-78312140022'
-        trunk: 'sp-84965419020',
+        real_trunk: 'cc-nn-78312140022',
+        dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '78312140022',
     },
@@ -43,109 +43,106 @@ const nums2mon = {
 
     // Кстово
     '88314539600': {
-        // trunk: 'kst-88314539600'
-        trunk: 'nn-88312681000',
+        real_trunk: 'kst-88314539600',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '39600',
     },
     '88314543977': {
-        // trunk: 'cc-kst-88314543977'
-        trunk: 'nn-88312681000',
+        real_trunk: 'cc-kst-88314543977',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78314543977',
     },
 
     // Сергиев Посад
     '84965419020': {
-        // trunk: 'sp-84965419020'
-        trunk: 'nn-88312681000',
+        real_trunk: 'sp-84965419020',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '84965419020',
     },
 
     // Пенза
     '88412980100': {
-        // trunk: 'pnz-88412980100'
-        trunk: 'nn-88312681000',
+        real_trunk: 'pnz-88412980100',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78412980100',
     },
 
     // Киров
     '88332713317': {
-        // trunk: 'kir-88332713317'
-        trunk: 'nn-88312681000',
+        real_trunk: 'kir-88332713317',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78332713317',
     },
 
     // Кемерово
     '83842780118': {
-        // trunk: 'cc-kem-73842780118'
-        trunk: 'nn-88312681000',
+        real_trunk: 'cc-kem-73842780118',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '73842780118',
     },
 
     // Самара
     '88463004000': {
-        // trunk: 'smr-88463004000'
-        trunk: 'nn-88312681000',
+        real_trunk: 'smr-88463004000',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '3004000',
     },
     '88463004004': {
-        // trunk: 'smr-88463004004'
-        trunk: 'nn-88312681000',
+        real_trunk: 'smr-88463004004',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '3004004',
     },
     '88463004006': {
-        // trunk: 'smr-88463004006'
-        trunk: 'nn-88312681000',
+        real_trunk: 'smr-88463004006',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '3004006',
     },
     '88463004008': {
-        // trunk: 'smr-88463004008'
-        trunk: 'nn-88312681000',
+        real_trunk: 'smr-88463004008',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '3004008',
     },
     '88462500045': {
-        // trunk: 'cc-smr-78462500045'
-        trunk: 'nn-88312681000',
+        real_trunk: 'cc-smr-78462500045',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78462500045',
     },
 
     // Набережные Челны
     '88552917722': {
-        // trunk: 'nch-88552917722'
-        trunk: 'nn-88312681000',
+        real_trunk: 'nch-88552917722',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '88552917722',
     },
 
     // Волгоград
     '88442999998': {
-        // trunk: 'ars-vgg-78442999998'
-        trunk: 'nn-88312681000',
+        real_trunk: 'ars-vgg-78442999998',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '999998',
     },
 
     // Волжский
     '88443201058': {
-        // trunk: 'cc-vlz-78443201058'
-        trunk: 'nn-88312681000',
+        real_trunk: 'cc-vlz-78443201058',
+        dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78443201058',
     },
 
-
-
-   
 
     // '88412458934': {
     //     trunk: 'pnz-78412458934'
@@ -222,7 +219,7 @@ const nums2mon = {
 
     // // Кстово СБК передача показаний, пока не мониторим
     // '88314536890': {
-    //     // trunk: 'kst-88314539600'
+    //     real_trunk: 'kst-88314539600'
     //     trunk: 'nn-88312681000'
     // },
 };
