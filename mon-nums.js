@@ -7,6 +7,7 @@ const { query, dbDisconnect } = require('./db');
 const { CCSApiClient } = require('./ccs-api-client');
 
 const check_interval = get(process.env, 'CHECK_INTERVAL', '5 minutes');
+const ast_srv = get(process.env, 'AST_SRV', '');
 
 const client = new CCSApiClient({
     url: process.env.API_URL,
@@ -14,7 +15,9 @@ const client = new CCSApiClient({
 });
 
 (async () => {
-    let sql = `select * from monitor_numbers where (now() - check_time) > interval '${check_interval}'`;
+    let sql = `select * from monitor_numbers where
+                    (now() - check_time) > interval '${check_interval}'
+                    and settings::json->>'real_trunk' in (select trunk from trunk_location where location='${ast_srv}')`;
     const { rows } = await query(sql);
     for (const { number, settings: settingsJSON, check_time } of rows) {
         const { dial_trunk:trunk, callerid } = JSON.parse(settingsJSON);
