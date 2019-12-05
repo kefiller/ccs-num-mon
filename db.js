@@ -1,12 +1,6 @@
 const { Pool } = require('pg')
 
-const pool = new Pool({
-    user: 'aster',
-    password: '12Fcnthbcr34',
-    host: '10.222.0.28',
-    database: 'ccs',
-    port: 5432,
-})
+const pool = new Pool();
 
 const dbDisconnect = (pool => () => pool.end())(pool);
 const dbQuery = (pool => query => pool.query(query))(pool);
@@ -19,7 +13,6 @@ const query = (async sql => {
     }
     return result;
 });
-
 
 module.exports = {
     query,

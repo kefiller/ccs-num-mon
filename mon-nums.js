@@ -1,14 +1,16 @@
 #!/usr/bin/env docker-node
 
+//const dnsPromises = require('dns').promises; // const addr = await dnsPromises.lookup('dclvccsapp.guo.local');
+
+const { get } = require('lodash');
 const { query, dbDisconnect } = require('./db');
 const { CCSApiClient } = require('./ccs-api-client');
 
-// const check_interval = '5 minutes';
-const check_interval = '1 minute';
+const check_interval = get(process.env, 'CHECK_INTERVAL', '5 minutes');
 
 const client = new CCSApiClient({
-    url: 'http://dclvccsapp.guo.local:8008/api/v1/',
-    auth: 'uyLH5PA0MngNyRaPQvr386SOSUiXU8'
+    url: process.env.API_URL,
+    auth: process.env.API_TOKEN,
 });
 
 (async () => {
@@ -32,6 +34,7 @@ const client = new CCSApiClient({
                     extension: number
                 }
             );
+
             console.log(result);
         } catch (error) {
             console.log(error);
@@ -39,9 +42,7 @@ const client = new CCSApiClient({
 
         sql = `update monitor_numbers set check_time=now() where number = '${number}'`;
         result = await query(sql);
-        // console.log(result);
     }
 
     dbDisconnect();
 })();
-

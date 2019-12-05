@@ -1,10 +1,10 @@
 #!/usr/bin/env docker-node
 
-const { isEmpty } = require('lodash');
+const { isEmpty, get } = require('lodash');
 
 const { query, dbDisconnect } = require('./db');
 
-const check_interval = '5 minutes';
+const check_interval = get(process.env, 'CHECK_INTERVAL', '5 minutes');
 
 const myArgs = process.argv.slice(2);
 
