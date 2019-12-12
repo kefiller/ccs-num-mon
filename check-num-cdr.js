@@ -16,21 +16,31 @@ if (isEmpty(myArgs)) {
 const number = myArgs[0];
 
 (async () => {
-    //let sql = `select * from cdr where calldate > now()::date and (now() - calldate) < interval '${check_interval}' and dst = '${number}' order by calldate desc limit 1`;
-    let sql = `select * from cdr where 
+    try {
+        let sql = `select * from cdr where 
                     calldate > now()::date 
                     and (now() - calldate) < interval '${check_interval}' 
                     and dst = (select settings::json->>'incoming_exten' from monitor_numbers where number='${number}')
                     and clid not like '"monitoring"%'
                     order by calldate desc limit 1`;
-    // console.log(sql);
-    const { rows } = await query(sql);
-    dbDisconnect();
-    if (rows.length > 0) {
-        console.log(`${number} OK`);
+
+        const { rows = [] } = await query(sql);
+        dbDisconnect();
+
+        console.log(`${rows.length}`);
         process.exit(0);
+
+/*
+        if (rows.length > 0) {
+            console.log(`${number} OK`);
+            process.exit(0);
+        }
+        console.log(`${number} BAD!`);
+        process.exit(1);
+*/
+    } catch (error) {
+        console.log(error);
     }
-    console.log(`${number} BAD!`);
-    process.exit(1);
 })();
 
+//let sql = `select * from cdr where calldate > now()::date and (now() - calldate) < interval '${check_interval}' and dst = '${number}' order by calldate desc limit 1`;

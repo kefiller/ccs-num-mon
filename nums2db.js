@@ -13,30 +13,35 @@ const nums2mon = {
        dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '88312681022',
+        desc: 'НН',
     },
     '88312681000': {
         real_trunk: 'nn-88312681000',
         dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '78312681000',
+        desc: 'НН',
     },
     '88312681007': {
         real_trunk: 'nn-88312681007',
         dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '88312681007',
+        desc: 'НН',
     },
     '88312813000': {
         real_trunk: 'cc-nn-78312813000',
         dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '78312813000',
+        desc: 'НН',
     },
     '88312140022': {
         real_trunk: 'cc-nn-78312140022',
         dial_trunk: 'sp-84965419020',
         callerid: '"monitoring" <84965419020>',
         incoming_exten: '78312140022',
+        desc: 'НН',
     },
 
     // 000
@@ -47,12 +52,14 @@ const nums2mon = {
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '39600',
+        desc: 'Кстово',
     },
     '88314543977': {
         real_trunk: 'cc-kst-88314543977',
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78314543977',
+        desc: 'Кстово',
     },
 
     // Сергиев Посад
@@ -61,6 +68,7 @@ const nums2mon = {
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '84965419020',
+        desc: 'Сергиев Посад',
     },
 
     // Пенза
@@ -69,6 +77,7 @@ const nums2mon = {
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78412980100',
+        desc: 'Пенза',
     },
 
     // Киров
@@ -77,6 +86,7 @@ const nums2mon = {
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78332713317',
+        desc: 'Киров',
     },
 
     // Кемерово
@@ -85,6 +95,7 @@ const nums2mon = {
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '73842780118',
+        desc: 'Кемерово',
     },
 
     // Самара
@@ -93,30 +104,35 @@ const nums2mon = {
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '3004000',
+        desc: 'Самара',
     },
     '88463004004': {
         real_trunk: 'smr-88463004004',
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '3004004',
+        desc: 'Самара',
     },
     '88463004006': {
         real_trunk: 'smr-88463004006',
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '3004006',
+        desc: 'Самара',
     },
     '88463004008': {
         real_trunk: 'smr-88463004008',
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '3004008',
+        desc: 'Самара',
     },
     '88462500045': {
         real_trunk: 'cc-smr-78462500045',
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78462500045',
+        desc: 'Самара',
     },
 
     // Набережные Челны
@@ -125,6 +141,7 @@ const nums2mon = {
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '88552917722',
+        desc: 'Набережные Челны',
     },
 
     // Волгоград
@@ -133,6 +150,7 @@ const nums2mon = {
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '999998',
+        desc: 'Волгоград',
     },
 
     // Волжский
@@ -141,8 +159,8 @@ const nums2mon = {
         dial_trunk: 'nn-88312681000',
         callerid: '"monitoring" <88312681000>',
         incoming_exten: '78443201058',
+        desc: 'Волжский',
     },
-
 
     // '88412458934': {
     //     trunk: 'pnz-78412458934'
