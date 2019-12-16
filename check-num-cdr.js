@@ -22,25 +22,15 @@ const number = myArgs[0];
                     and (now() - calldate) < interval '${check_interval}' 
                     and dst = (select settings::json->>'incoming_exten' from monitor_numbers where number='${number}')
                     and clid not like '"monitoring"%'
-                    order by calldate desc limit 1`;
+                    order by calldate desc`;
 
         const { rows = [] } = await query(sql);
         dbDisconnect();
 
         console.log(`${rows.length}`);
         process.exit(0);
-
-/*
-        if (rows.length > 0) {
-            console.log(`${number} OK`);
-            process.exit(0);
-        }
-        console.log(`${number} BAD!`);
-        process.exit(1);
-*/
     } catch (error) {
         console.log(error);
+        process.exit(1);
     }
 })();
-
-//let sql = `select * from cdr where calldate > now()::date and (now() - calldate) < interval '${check_interval}' and dst = '${number}' order by calldate desc limit 1`;
