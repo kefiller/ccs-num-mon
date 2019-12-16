@@ -7,6 +7,7 @@ SCRIPT_ORIGDIR=`dirname $SCRIPT_ORIGPATH`
 docker run -t --rm  -w /app \
     --network=host \
     -v $SCRIPT_ORIGDIR:/app \
+    -e NODE_DISABLE_COLORS=1 \
     -e AST_SRV=`hostname -A` \
     -e PGUSER=aster \
     -e PGHOST=db.ccs.local \
