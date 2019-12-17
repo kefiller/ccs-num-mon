@@ -13,7 +13,7 @@ docker run -t --rm  -w /app \
     -e PGHOST=db.ccs.local \
     -e PGPASSWORD=*CHANGEME* \
     -e PGDATABASE=ccs \
-    -e CHECK_INTERVAL='5 minutes' \
+    -e CHECK_INTERVAL='4 minutes' \
     -e API_URL='http://dclvccsapp.guo.local:8008/api/v1/' \
     -e API_TOKEN='uyLH5PA0MngNyRaPQvr386SOSUiXU8' \
     node:latest node $@
