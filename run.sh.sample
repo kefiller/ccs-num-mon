@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Detect where script SOURCE is located
+SCRIPT_ORIGPATH=`readlink -f "$(test -L "$0" && readlink "$0" || echo "$0")"`
+SCRIPT_ORIGDIR=`dirname $SCRIPT_ORIGPATH`
+
+docker run -t --rm  -w /app \
+    --network=host \
+    -v $SCRIPT_ORIGDIR:/app \
+    -e NODE_DISABLE_COLORS=1 \
+    -e AST_SRV=`hostname -A` \
+    -e PGUSER=aster \
+    -e PGHOST=db.ccs.local \
+    -e PGPASSWORD=*CHANGEME* \
+    -e PGDATABASE=ccs \
+    -e CHECK_INTERVAL='4 minutes' \
+    -e API_URL='http://dclvccsapp.guo.local:8008/api/v1/' \
+    -e API_TOKEN='uyLH5PA0MngNyRaPQvr386SOSUiXU8' \
+    node:latest node $@
